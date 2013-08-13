@@ -39,11 +39,12 @@
 *.sql
 *.sqlite
 
-###########
-# Backups #
-###########
+########################
+# Backups / Swap Files #
+########################
 *.bkp
 *.orig
+*.swp
 
 ######################
 # OS generated files #
