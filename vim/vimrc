@@ -19,9 +19,11 @@
     filetype indent on      " Enable loading indents for specific file types
     set mouse=h             " Enable mouse for vim help files
     set autochdir           " Automatically change to dir of currently open file
+
 " }
 
 " Vim UI {
+    set noshowmode          " Don't show the current mode, as airline-vim shows it
     set ruler               " Shows the ruler (line, column) in status line
     set showcmd             " Show partial commands in status line
     set backspace=2         " Make backspacing more natural with other text editors
@@ -44,8 +46,8 @@
     set confirm             " Show a dialog when a command fails
     set shortmess=I         " Don't give the intro message when starting Vim
 
-    " Lower the timeout to allow the powerline to update immediately
-    set timeoutlen=0
+    " Lower the timeout to allow airline-vim to update immediately
+    set timeout timeoutlen=1000 ttimeoutlen=50
 " }
 
 " Formatting {
