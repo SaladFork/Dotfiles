@@ -25,7 +25,7 @@
 
 " }
 
-" Vim UI {
+" UI {
     set noshowmode          " Don't show the current mode, as airline-vim shows it
     set ruler               " Shows the ruler (line, column) in status line
     set showcmd             " Show partial commands in status line
