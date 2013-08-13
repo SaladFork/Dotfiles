@@ -1,4 +1,7 @@
 " Pathogen setup {
+    " Required since we're using pathogen as a submodule in a directory other than autoload
+    runtime bundle/vim-pathogen/autoload/pathogen.vim
+
     execute pathogen#infect()
 " }
 
