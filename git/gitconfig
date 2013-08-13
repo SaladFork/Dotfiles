@@ -28,7 +28,7 @@
 
     ; New external commands
     live = "!while :; do clear; git --no-pager lga; sleep 2; done"
-    new = "!git init && git commit --allow-empty -m 'Initial commit'"
+    new  = "!git init && git commit --allow-empty -m 'Initial commit'"
 
 [color]
     ; This automatically expands to include all (color.diff, color.branch, etc.)
