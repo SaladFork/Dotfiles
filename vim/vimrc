@@ -93,6 +93,7 @@
     nnoremap <C-l> <C-w><l>
 
     " Toggle paste mode
+    nnoremap <F3> :set invpaste paste?<CR>
     set pastetoggle=<F3>
 
     " Toggle Tagbar
