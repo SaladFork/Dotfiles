@@ -1,0 +1,98 @@
+" Pathogen setup {
+    execute pathogen#infect()
+" }
+
+" Environment {
+    set nocompatible        " Stop vim from behaving in a vi-compatible way
+    set background=dark
+    syntax on               " Enable syntax highlighting
+    if &term == "xterm-256color" || has("gui_running")
+        colorscheme lucius  " Use the lucius color scheme
+        LuciusBlack
+    endif
+    set encoding=utf-8
+" }
+
+" General {
+    filetype on             " Enable file type detection
+    filetype plugin on      " Enable loading plugins for specific file types
+    filetype indent on      " Enable loading indents for specific file types
+    set mouse=h             " Enable mouse for vim help files
+    set autochdir           " Automatically change to dir of currently open file
+" }
+
+" Vim UI {
+    set ruler               " Shows the ruler (line, column) in status line
+    set showcmd             " Show partial commands in status line
+    set backspace=2         " Make backspacing more natural with other text editors
+    set linespace=0         " No extra spaces between rows
+    set number              " Show line numbers on the left
+    set showmatch           " Show matching brackets/parenthesis
+    set mat=5               " Blink the match for 5 tenths of a second
+    set incsearch           " Find as you type while searching
+    set nohlsearch          " Don't highlight search term
+    set ignorecase          " Case-insensitive search
+    set smartcase           " Case-sensitive search when uppercase characters present
+    set wildmode=longest:full  " Complete only the longest common string
+    set wildmenu            " Show completion list instead of just completing
+    set whichwrap+=<,>,h,l  " Left/Right cursor keys can wrap lines too
+    set scrolloff=3         " Minimum number of lines to keep above and below cursor
+    set cursorline          " Highlight the current line
+    set gdefault            " Set the /g flag on :s substitutions by default
+    set report=0            " Always report how many lines are changed by a command
+    set laststatus=2        " Always show status bar
+    set confirm             " Show a dialog when a command fails
+    set shortmess=I         " Don't give the intro message when starting Vim
+
+    " Lower the timeout to allow the powerline to update immediately
+    set timeoutlen=0
+" }
+
+" Formatting {
+    set autoindent          " When starting a newline, copy indentation from previous line
+    set tabstop=4           " Number of spaces a tab stands for
+    set softtabstop=4       " How many columns to use when <Tab> is hit in insert mode
+    set shiftwidth=4        " Number of spaces used for each step of (auto) indent
+    set expandtab           " Insert spaces when <Tab> is pressed
+    set smarttab            " Be smart about which tabstop/width to use depending on context
+    set noerrorbells        " Don't show error bells
+    set novisualbell        " Don't show a visual bell
+    set vb t_vb=            " Don't show a visual bell at all
+    set iskeyword+=_,$,@,%,#,-  " Always see certain special characters as keywords
+    set preserveindent      " When changing indentation, preserve as much as possible
+    set list                " Show trailing spaces and tabs and such
+    set listchars=tab:>.,trail:.,extends:#,nbsp:.
+" }
+
+" Key Mappings {
+
+    " For when you forget to sudo -- really write the file
+    cmap w!! w !sudo tee % > /dev/null
+
+    " Make arrow keys do what you actually want (move by screen line, not file line)
+    nnoremap <down> g<down>
+    nnoremap <up> g<up>
+    nnoremap j gj
+    nnoremap k gk
+
+    " Disable the goddamn help key that you always hit by accident instead of ESC
+    " inoremap <F1> <ESC>
+    " nnoremap <F1> <ESC>
+    " vnoremap <F1> <ESC>
+
+    " Jump around splits easier
+    nnoremap <C-left> <C-w><left>
+    nnoremap <C-down> <C-w><down>
+    nnoremap <C-right> <C-w><right>
+    nnoremap <C-up> <C-w><up>
+    nnoremap <C-h> <C-w><h>
+    nnoremap <C-j> <C-w><j>
+    nnoremap <C-k> <C-w><k>
+    nnoremap <C-l> <C-w><l>
+
+    " Toggle paste mode
+    set pastetoggle=<F3>
+
+    " Toggle Tagbar
+    nnoremap <silent> <F2> :TagbarToggle<CR>
+" }
