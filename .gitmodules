@@ -13,3 +13,6 @@
 [submodule "vim/vim/bundle/vim-pathogen"]
 	path = vim/vim/bundle/vim-pathogen
 	url = git@github.com:tpope/vim-pathogen.git
+[submodule "bin/z"]
+	path = bin/z
+	url = git@github.com:rupa/z.git
