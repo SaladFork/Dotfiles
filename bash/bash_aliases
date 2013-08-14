@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Shorthand
+alias c='clear'
+alias ct='cleartool'
+alias ctsv='cleartool setview'
+alias h='history'
+alias hgrep='history | grep'
+alias ll='ls -l'
+alias ls='ls -FGh'
+alias vdiff='vimdiff'
+alias vi='vim'
+
+# Extend existing commands
+alias gcc='gcc -Wall'
+alias grep='grep --color=auto'
+alias less='less -r'
+alias more='less -r' # More is less...?
+alias subl='subl -n'
+alias tree='tree -C'
+
+# New commands
+alias myip="ifconfig eth0 | \grep inet | grep -v inet6 | cut -d':' -f2 | cut -d' ' -f1"
+alias reload="source $HOME/.bashrc"
+
+# Windows-specific aliases
+if [ "$OS" = "Windows_NT" ]; then
+    # FIXME: Often ends up trying to open a nonexisting .../cygdrive/... path
+    #   - Tilde expansion doesn't work
+    #   - Symlinks don't work
+    alias subl="/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe -n"
+fi
+
+# Retired
+# alias cs='ssh eshahar@cs.uml.edu'
+# alias tunnel='screen -d -m -S tunnel ssh -C2qTnN -D 8080 eshahar@cs.uml.edu'
