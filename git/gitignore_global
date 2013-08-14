@@ -46,6 +46,12 @@
 *.orig
 *.swp
 
+#################
+# Project Files #
+#################
+*.sublime-project
+*.sublime-workspace
+
 ######################
 # OS generated files #
 ######################
