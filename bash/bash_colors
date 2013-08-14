@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Color reset
+COLOR_RESET=$(tput sgr0)
+
+# Regular colors
+  COLOR_BLACK=$(tput setaf 0)
+    COLOR_RED=$(tput setaf 1)
+  COLOR_GREEN=$(tput setaf 2)
+ COLOR_YELLOW=$(tput setaf 3)
+   COLOR_BLUE=$(tput setaf 4)
+COLOR_MAGENTA=$(tput setaf 5)
+   COLOR_CYAN=$(tput setaf 6)
+  COLOR_WHITE=$(tput setaf 7)
+
+# Bold colors
+  COLOR_BRIGHT_BLACK=$(tput setaf 0 && tput bold)
+    COLOR_BRIGHT_RED=$(tput setaf 1 && tput bold)
+  COLOR_BRIGHT_GREEN=$(tput setaf 2 && tput bold)
+ COLOR_BRIGHT_YELLOW=$(tput setaf 3 && tput bold)
+   COLOR_BRIGHT_BLUE=$(tput setaf 4 && tput bold)
+COLOR_BRIGHT_MAGENTA=$(tput setaf 5 && tput bold)
+   COLOR_BRIGHT_CYAN=$(tput setaf 6 && tput bold)
+  COLOR_BRIGHT_WHITE=$(tput setaf 7 && tput bold)
+
