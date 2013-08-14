@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Change the 16 mintty ANSI colors
+# See: https://code.google.com/p/mintty/wiki/Tips#Changing_colours
+
+# Overwrite with the Tango palette colors
+echo -ne '\e]4;0;#2e3436\a'   # black
+echo -ne '\e]4;1;#cc0000\a'   # red
+echo -ne '\e]4;2;#4e9a06\a'   # green
+echo -ne '\e]4;3;#c4a000\a'   # yellow
+echo -ne '\e]4;4;#3465a4\a'   # blue
+echo -ne '\e]4;5;#75507b\a'   # magenta
+echo -ne '\e]4;6;#06989a\a'   # cyan
+echo -ne '\e]4;7;#d3d7cf\a'   # white (light grey really)
+echo -ne '\e]4;8;#2e3436\a'   # bold black (i.e. dark grey)
+echo -ne '\e]4;9;#ef2929\a'   # bold red
+echo -ne '\e]4;10;#8ae234\a'  # bold green
+echo -ne '\e]4;11;#fce94f\a'  # bold yellow
+echo -ne '\e]4;12;#729fcf\a'  # bold blue
+echo -ne '\e]4;13;#ad7fa8\a'  # bold magenta
+echo -ne '\e]4;14;#34e2e2\a'  # bold cyan
+echo -ne '\e]4;15;#eeeeec\a'  # bold white
