@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Prompt Goodies
+PROMPT_USER='\u'
+PROMPT_HOSTNAME_SHORT='\h' # The hostname up to the first '.'
+PROMPT_HOSTNAME_LONG='\H'
+PROMPT_CWD='\w'
+PROMPT_CWD_BASE='\W'
+PROMPT_ENDCHAR='\$'
+
+# There are many ways to do this, many of which provide more information (e.g., git-status and git-branch)
+# However, these introduce a noticeable delay to the prompt. This is the fastest way I can find to do this.
+# Originally found in git-completion.bash <http://github.com/git/git/contrib/completion>
+function parse_git_branch() {
+    ref=$(git symbolic-ref -q HEAD 2> /dev/null) || return
+    retCode=$?
+    if [ -n "$ref" ] && [ $retCode -eq 0 ]; then
+        echo "{${ref#refs/heads/}}"
+    fi
+
+    # TODO: Support detached HEAD
+}
+
+function update_ps1() {
+    # Start with building up a base prompt
+    BASE_PS1="\[$COLOR_BRIGHT_GREEN\]["
+
+    # If we're on a local machine, no need for username or hostname
+    if [ -n "$SSH_CONNECTION" ]; then
+        BASE_PS1+="\[$COLOR_BRIGHT_CYAN\]$PROMPT_USER\[$COLOR_BRIGHT_GREEN\]@\[$COLOR_BRIGHT_YELLOW\]$PROMPT_HOSTNAME_SHORT "
+    fi
+
+    # Add the rest of our base prompt
+    BASE_PS1+="\[$COLOR_BRIGHT_WHITE\]$PROMPT_CWD\[$COLOR_BRIGHT_GREEN\]]\[$COLOR_BRIGHT_RED\]\$\[$COLOR_RESET\] "
+
+    # Add other scripts and set PS1
+    PS1="\[$COLOR_WHITE\]"'$(parse_git_branch)'$BASE_PS1
+}
+
+# Add update_ps1 to PROMPT_COMMAND, at most once
+echo $PROMPT_COMMAND | grep -q "update_ps1" || {
+    export PROMPT_COMMAND='update_ps1;'"$PROMPT_COMMAND"
+}
