@@ -17,6 +17,7 @@ alias less='less -r'
 alias more='less -r' # More is less...?
 alias subl='subl -n'
 alias tree='tree -C'
+alias du='du -h'
 
 # New commands
 alias myip="ifconfig eth0 | \grep inet | grep -v inet6 | cut -d':' -f2 | cut -d' ' -f1"
