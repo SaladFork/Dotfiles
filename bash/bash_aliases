@@ -23,13 +23,19 @@ alias tree='tree -C'
 alias myip="ifconfig eth0 | \grep inet | grep -v inet6 | cut -d':' -f2 | cut -d' ' -f1"
 alias reload="source $HOME/.bashrc"
 
-# Windows-specific aliases
-if [ "$OS" = "Windows_NT" ]; then
-    # FIXME: Often ends up trying to open a nonexisting .../cygdrive/... path
-    #   - Tilde expansion doesn't work
-    #   - Symlinks don't work
-    alias subl="/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe -n"
-fi
+# Platform specific aliases
+case "$OSTYPE" in
+    win32 | cygwin)         # Windows
+        # FIXME: Often ends up trying to open a nonexisting .../cygdrive/... path
+        #   - Tilde expansion doesn't work
+        #   - Symlinks don't work
+        alias subl="c:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe -n"
+        ;;
+    darwin*)                # Mac
+        ;;
+    linux-gnu | freebsd)    # Linux
+        ;;
+esac
 
 # Retired
 # alias cs='ssh eshahar@cs.uml.edu'
