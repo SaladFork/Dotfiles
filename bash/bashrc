@@ -1,0 +1,48 @@
+# .bashrc
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# Source all the source scripts
+for script in ".bash_colors" ".mintty_colors" ".bash_prompt" ".bash_aliases" "bin/z.sh"; do
+    [ -f "$HOME/${script}" ] && source "$HOME/${script}"
+done
+
+# Set bash options
+
+export EDTIOR=vim
+export HISTCONTROL=ignoredup                # Don't put duplicate lines in the history
+export HISTIGNORE="&:ls:[bf]g:exit:history" # Ignore duplicate commands and other unhelpful commands
+export HISTSIZE=100000
+
+# Shopt (shell optional behaviors) docummentation:
+# http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
+
+# Append to the bash history rather than clobber it (good for multiple terminal windows)
+shopt -s histappend
+
+# Check the window size after each command and, if necessary, update the values of LINES and COLUMNS
+shopt -s checkwinsize
+
+# Correct minor spelling errors in `cd` commands
+shopt -s cdspell
+
+# Attempt to save all lines of a multiple-line command line in the same history entry
+shopt -s cmdhist
+
+# Add directories to PATH only if valid and not already in PATH
+function addToPath() {
+    for path in "$@"; do
+        if [ -d "$path" ] && [[ ":$PATH:" != *":$path:"* ]]; then
+            export PATH="${PATH:+"$PATH:"}$path"
+        fi
+    done
+}
+addToPath "/usr/local/bin" "/bin" "/sbin" "/usr/bin" "/usr/sbin" "$HOME/bin"
+
+
+# Execute private scripts (not in Git)
+for script in ".bash_netscout"; do
+    [ -f "$HOME/${script}" ] && source "$HOME/${script}"
+done
+
