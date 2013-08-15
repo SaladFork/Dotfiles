@@ -7,7 +7,6 @@ alias ctsv='cleartool setview'
 alias h='history'
 alias hgrep='history | grep'
 alias ll='ls -l'
-alias ls='ls -FGh'
 alias vdiff='vimdiff'
 alias vi='vim'
 
@@ -30,10 +29,14 @@ case "$OSTYPE" in
         #   - Tilde expansion doesn't work
         #   - Symlinks don't work
         alias subl="c:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe -n"
+
+        alias ls='ls -Fh --color=auto --group-directories-first --time-style=+"%b %e %Y %_I:%M%P"'
         ;;
     darwin*)                # Mac
+        alias ls='ls -FGh'
         ;;
     linux-gnu | freebsd)    # Linux
+        alias ls='ls -Fh --color=auto --group-directories-first --time-style=+"%b %e %Y %_I:%M%P"'
         ;;
 esac
 
