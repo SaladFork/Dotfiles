@@ -9,7 +9,7 @@
     set nocompatible        " Stop vim from behaving in a vi-compatible way
     set background=dark
     syntax on               " Enable syntax highlighting
-    if &term == "xterm-256color" || has("gui_running")
+    if &t_Co > 2 || has("gui_running")
         colorscheme lucius  " Use the lucius color scheme
         LuciusBlack
     endif
@@ -22,7 +22,7 @@
     filetype indent on      " Enable loading indents for specific file types
     set mouse=h             " Enable mouse for vim help files
     set autochdir           " Automatically change to dir of currently open file
-
+    set autoread            " Will reload files if changed
 " }
 
 " UI {
