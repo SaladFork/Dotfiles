@@ -8,6 +8,7 @@ alias h='history'
 alias hgrep='history | grep'
 alias ll='ls -l'
 alias vdiff='vimdiff'
+alias gdiff='git diff -U0 --patience --minimal --word-diff'
 alias vi='vim'
 
 # Extend existing commands
