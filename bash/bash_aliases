@@ -33,6 +33,7 @@ case "$OSTYPE" in
         alias subl="c:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe -n"
 
         alias ls='ls -Fh --color=auto --group-directories-first --time-style=+"%b %e %Y %_I:%M%P"'
+        alias open='cygstart'
         ;;
     darwin*)                # Mac
         alias ls='ls -FGh'
