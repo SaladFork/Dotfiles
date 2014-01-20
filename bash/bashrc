@@ -10,7 +10,7 @@ done
 
 # Set bash options
 
-export EDTIOR=vim
+export EDITOR=vim
 export HISTCONTROL=ignoredup                # Don't put duplicate lines in the history
 export HISTIGNORE="&:ls:[bf]g:exit:history" # Ignore duplicate commands and other unhelpful commands
 export HISTSIZE=100000
