@@ -1,18 +1,24 @@
 [submodule "vim/vim/bundle/tagbar"]
-	path = vim/vim/bundle/tagbar
-	url = git@github.com:majutsushi/tagbar.git
+    path = vim/vim/bundle/tagbar
+    url = git@github.com:majutsushi/tagbar.git
+    ignore = dirty
 [submodule "vim/vim/bundle/vim-airline"]
-	path = vim/vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
+    path = vim/vim/bundle/vim-airline
+    url = git@github.com:bling/vim-airline.git
+    ignore = dirty
 [submodule "vim/vim/bundle/vim-fugitive"]
-	path = vim/vim/bundle/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
+    path = vim/vim/bundle/vim-fugitive
+    url = git@github.com:tpope/vim-fugitive.git
+    ignore = dirty
 [submodule "vim/vim/bundle/vim-lucius"]
-	path = vim/vim/bundle/vim-lucius
-	url = git@github.com:jonathanfilip/vim-lucius.git
+    path = vim/vim/bundle/vim-lucius
+    url = git@github.com:jonathanfilip/vim-lucius.git
+    ignore = dirty
 [submodule "vim/vim/bundle/vim-pathogen"]
-	path = vim/vim/bundle/vim-pathogen
-	url = git@github.com:tpope/vim-pathogen.git
+    path = vim/vim/bundle/vim-pathogen
+    url = git@github.com:tpope/vim-pathogen.git
+    ignore = dirty
 [submodule "bin/z"]
-	path = bin/z
-	url = git@github.com:rupa/z.git
+    path = bin/z
+    url = git@github.com:rupa/z.git
+    ignore = dirty
