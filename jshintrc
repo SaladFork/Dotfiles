@@ -1,0 +1,195 @@
+{
+
+    /*
+     * Set options for JSHint
+     *
+     * Note that comments are technically not allowed in JSON (this file), but
+     * since it still works, we opt to use them to improve option clarity.
+     *
+     * More information:
+     *  <http://www.jshint.com/docs/options/>
+     */
+
+
+
+    // =========================================================================
+    // Enforcing options
+
+
+    // Prohibits the use of bitwise operators (&,|,^,~,<<,>>,>>>)
+    "bitwise": true,
+
+    // Requires all variable names to use camelCase or UPPER_CASE
+    "camelcase": false,
+
+    // Requires curly braces around blocks in loops and conditionals
+    "curly": true,
+
+    // Prohibits '==' and '!=' in favor of '===' and '!=='
+    "eqeqeq": true,
+
+    // Requires adherance to ECMAScript 3 spec for older browser support
+    "es3": true,
+
+    // Requires for-in loops to filter object's items
+    "forin": true,
+
+    // Prohibits overwriting prototypes of native objects
+    "freeze": true,
+
+    // Requires parentheses for use of immediate function invocations
+    "immed": true,
+
+    // Requires set tab width for consistent readability
+    "indent": 4, // 4 spaces
+
+    // Requires variables to be defined before use
+    "latedef": "nofunc", // unless used as a function
+
+    // Requires constructor functions to start with a capital letter
+    "newcap": true,
+
+    // Prohibits the use of arguments.caller and .callee (deprecated and slow)
+    "noarg": true,
+
+    // Prohibits empty JavaScript blocks
+    "noempty": true,
+
+    // Prohibits the use of constructor functions for side-effects
+    "nonew": true,
+
+    // Prohibits the use of unary increment (++) and decrement (--) operators
+    "plusplus": false,
+
+    // Require consistent use of single versus double quotation marks
+    "quotmark": false,
+
+    // Prohibits use of explicitly undeclared variables
+    "undef": true,
+
+    // Prohibits defined variables that go unused
+    "unused": true,
+
+    // Requires adherance to ECMAScript 5's strict mode
+    "strict": true,
+
+    // Prohibit trailing whitespace in your code
+    "trailing": true,
+
+    // Limit the max number of formal parameters per function
+    "maxparams": false,
+
+    // Limit the max nesting level for code blocks
+    "maxdepth": false,
+
+    // Limit the max number of statements per function
+    "maxstatements": false,
+
+    // Limit the cyclomatic complexity throughout the code
+    "maxcomplexity": false,
+
+    // Limit the maximum length of a line
+    "maxlen": false,
+
+
+
+    // =========================================================================
+    // Relaxing options
+
+
+    // Suppress warnings about missing semicolons
+    "asi": false,
+
+    // Suppress warnings about use of assignments as comparisons
+    "boss": false,
+
+    // Suppress warnings about 'debugger' statements in code
+    "debug": false,
+
+    // Suppress warnings about '== null' comparisons
+    "eqnull": false,
+
+    // Let JSHint know that code uses EMCAScript 6 specific syntax
+    "esnext": false,
+
+    // Suppress warnings about the use of 'eval'
+    "evil": false,
+
+    // Suppress warnings about use of expressions as assignments or functions
+    "expr": false,
+
+    // Suppress warnings about potentially accessing variables outside of scope
+    "funcscope": false,
+
+    // Let JSHint know that code is compatible with Google Closure Compiler
+    "gcl": false,
+
+    // Suppress warnings about use of global strict mode
+    "globalstrict": false,
+
+    // Suppress warnings about the __iterator__ property
+    "iterator": false,
+
+    // Suppress warnings about missing semicolon for one-line block statements
+    "lastsemic": false,
+
+    // Suppress warnings about possibly unsafe line endings
+    "laxbreak": false,
+
+    // Suppress warnings about comma-first coding style
+    "laxcomma": false,
+
+    // Suppress warnings about defining functions inside of loops
+    "loopfunc": false,
+
+    // Let JSHint know that code uses Mozilla JavaScript extensions
+    "moz": false,
+
+    // Suppress warnings about multi-line strings
+    "multistr": false,
+
+    // Suppress warnings about invalid 'typeof' operator values
+    "notypeof": false,
+
+    // Suppress warnings about the '__proto__' property
+    "proto": false,
+
+    // Suppress warnings about use of script-targeted URLs such as 'javascript:'
+    "scripturl": false,
+
+    // Suppress warnings about mixed tabs and spaces if latter used to align
+    "smarttabs": false,
+
+    // Suppress warnings about variable shadowing
+    "shadow": false,
+
+    // Suppress warnings about using '[]'  when '.' would be more appropriate
+    "sub": false,
+
+    // Suppress warnings about certain weird constructors
+    "supernew": false,
+
+    // Suppress warnings about possible strict violations regarding 'this' usage
+    "validthis": false,
+
+    // Suppress warnings about generator functions with no 'yield' statement
+    "noyield": false,
+
+
+
+    // =========================================================================
+    // Environments
+
+
+    // Defines globals exposed by modern browsers (e.g.: document, navigator)
+    "browser": true,
+
+    // Defines globals used for debugging (e.g.: console, alert)
+    "devel": true,
+
+    // Defines globals exposed by the jQuery library
+    "jquery": true,
+
+    // Defines non-standard but widely-adopted globals (e.g.: escape, unescape)
+    "nonstandard": true
+}
