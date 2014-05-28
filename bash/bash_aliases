@@ -13,8 +13,8 @@ alias vi='vim'
 
 # Extend existing commands
 alias gcc='gcc -Wall'
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
+alias grep='grep --color=auto -n'
+alias egrep='egrep --color=auto -n'
 alias less='less -r'
 alias more='less -r' # More is less...?
 alias subl='subl -n'
