@@ -15,15 +15,23 @@ function parse_git_branch() {
     ref=$(git symbolic-ref -q HEAD 2> /dev/null) || return
     retCode=$?
     if [ -n "$ref" ] && [ $retCode -eq 0 ]; then
-        echo "{${ref#refs/heads/}}"
+        echo "{${ref#refs/heads/}} "
     fi
 
     # TODO: Support detached HEAD
 }
 
 function update_ps1() {
+    local EXIT_STATUS="$?"
+
+    local PROMPT_COLOR="$COLOR_BRIGHT_GREEN"
+    if [ $EXIT_STATUS -ne 0 ]; then
+        PROMPT_COLOR="$COLOR_BRIGHT_RED"
+    fi
+
     # Start with building up a base prompt
-    BASE_PS1="\[$COLOR_BRIGHT_GREEN\]["
+    #BASE_PS1="\[$COLOR_BRIGHT_GREEN\]["
+    local BASE_PS1=""
 
     # If we're on a local machine, no need for username or hostname
     if [ -n "$SSH_CONNECTION" ]; then
@@ -31,7 +39,8 @@ function update_ps1() {
     fi
 
     # Add the rest of our base prompt
-    BASE_PS1+="\[$COLOR_BRIGHT_WHITE\]$PROMPT_CWD\[$COLOR_BRIGHT_GREEN\]]\[$COLOR_BRIGHT_RED\]\$\[$COLOR_RESET\] "
+    # BASE_PS1+="\[$COLOR_BRIGHT_WHITE\]$PROMPT_CWD\[$COLOR_BRIGHT_GREEN\]]\[$COLOR_BRIGHT_RED\]\$\[$COLOR_RESET\] "
+    BASE_PS1+="\[$COLOR_BRIGHT_WHITE\]$PROMPT_CWD \[$PROMPT_COLOR\]"$'\xe2\x96\xba'"\[$COLOR_RESET\] "
 
     # Add other scripts and set PS1
     PS1="\[$COLOR_WHITE\]"'$(parse_git_branch)'$BASE_PS1
