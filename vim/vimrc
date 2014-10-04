@@ -10,8 +10,9 @@
     set background=dark
     syntax on               " Enable syntax highlighting
     if &t_Co > 2 || has("gui_running")
-        colorscheme lucius  " Use the lucius color scheme
-        LuciusBlack
+        colorscheme molokai  " Use the lucius color scheme
+        let g:rehash256 = 1  " Use 256 color mode for molokai
+        " LuciusBlack
     endif
     set encoding=utf-8
 " }
