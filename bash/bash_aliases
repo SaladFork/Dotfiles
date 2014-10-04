@@ -39,6 +39,9 @@ case "$OSTYPE" in
         ;;
     darwin*)                # Mac
         alias ls='ls -FGh'
+        function dash() {
+            open "dash://$*"
+        }
         ;;
     linux-gnu | freebsd)    # Linux
         alias ls='ls -Fh --color=auto --group-directories-first --time-style=+"%b %e %Y %_I:%M%P"'
