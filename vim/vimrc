@@ -50,8 +50,22 @@
     set confirm             " Show a dialog when a command fails
     set shortmess=I         " Don't give the intro message when starting Vim
 
-    " Lower the timeout to allow airline-vim to update immediately
-    set timeout timeoutlen=1000 ttimeoutlen=50
+    " vim-airline {
+        " Show tabline along the top
+        let g:airline#extensions#tabline#enabled = 1
+
+        " Use powerline symbols automatically
+        let g:airline_left_sep = '⮀'
+        let g:airline_left_alt_sep = '⮁'
+        let g:airline_right_sep = '⮂'
+        let g:airline_right_alt_sep = '⮃'
+        let g:airline_branch_prefix = '⭠ '
+        let g:airline_readonly_symbol = '⭤'
+        let g:airline_linecolumn_prefix = '⭡'
+
+        " Lower the timeout to allow airline-vim to update immediately
+        set timeout timeoutlen=1000 ttimeoutlen=50
+    " }
 " }
 
 " Formatting {
