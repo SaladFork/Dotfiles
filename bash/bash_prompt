@@ -25,7 +25,8 @@ function update_ps1() {
     local EXIT_STATUS="$?"
 
     local PROMPT_COLOR="$COLOR_BRIGHT_GREEN"
-    if [ $EXIT_STATUS -ne 0 ]; then
+    # 130 = "Ctrl-C was pressed"
+    if [ $EXIT_STATUS -ne 0 -a $EXIT_STATUS -ne 130 ]; then
         PROMPT_COLOR="$COLOR_BRIGHT_RED"
     fi
 
