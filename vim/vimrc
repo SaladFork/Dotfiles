@@ -12,7 +12,6 @@
     if &t_Co > 2 || has("gui_running")
         colorscheme molokai  " Use the molokai color scheme
         let g:rehash256 = 1  " Use 256 color mode for molokai
-        " LuciusBlack
     endif
     set encoding=utf-8
 " }
