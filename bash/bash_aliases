@@ -10,6 +10,10 @@ alias ll='ls -l'
 alias vdiff='vimdiff'
 alias gdiff='git diff -U0 --patience --minimal --word-diff'
 alias vi='vim'
+alias nom='rm -rf node_modules && npm cache clean && npm install'
+alias bom='rm -rf bower_components && bower cache clean && bower install'
+alias nombom='rm -rf node_modules bower_components && npm cache clean && bower cache clean && npm install && bower install'
+
 
 # Extend existing commands
 alias gcc='gcc -Wall'
