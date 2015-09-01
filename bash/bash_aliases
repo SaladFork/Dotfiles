@@ -36,7 +36,7 @@ case "$OSTYPE" in
         # FIXME: Often ends up trying to open a nonexisting .../cygdrive/... path
         #   - Tilde expansion doesn't work
         #   - Symlinks don't work
-        alias subl="c:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe -n"
+        alias subl="/cygdrive/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe -n"
 
         alias ls='ls -Fh --color=auto --group-directories-first --time-style=+"%b %e %Y %_I:%M%P"'
         alias open='cygstart'
