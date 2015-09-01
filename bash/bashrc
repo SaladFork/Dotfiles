@@ -38,7 +38,7 @@ function addToPath() {
         fi
     done
 }
-addToPath  "/bin" "/sbin" "/usr/bin" "/usr/sbin" "/usr/local/bin" "$HOME/bin"
+export PATH="$HOME/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 
 # Execute private scripts (not in Git)
