@@ -46,6 +46,10 @@
     autosetuprebase = always
 [credential]
 	helper = osxkeychain
+
+[diff]
+    algorithm = patience
+
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
