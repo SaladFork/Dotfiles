@@ -1,6 +1,7 @@
 # Shortcuts
 alias c='clear'
 alias h='history'
+alias hgrep='history | grep'
 
 # Extend existing commands
 alias ls='ls -FG'
