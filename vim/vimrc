@@ -115,4 +115,15 @@
 
     " Toggle Tagbar
     nnoremap <silent> <F2> :TagbarToggle<CR>
+
+    " Toggle NERD Tree
+    nnoremap <silent> <F4> :NERDTreeToggle<CR>
+
+    " Automatically open NERD Tree if no files
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+    " Close VIM if NERD Tree is last window
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " }
