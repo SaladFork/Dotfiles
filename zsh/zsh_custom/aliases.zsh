@@ -6,6 +6,7 @@ alias hgrep='history | grep'
 # Extend existing commands
 alias ls='ls -FG'
 alias git=hub # https://github.com/github/hub
+alias tree='tree --dirsfirst'
 
 # New commands
 alias reload='source ~/.zshrc'
