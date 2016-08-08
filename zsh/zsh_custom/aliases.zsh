@@ -11,6 +11,7 @@ alias tree='tree --dirsfirst'
 # New commands
 alias reload='source ~/.zshrc'
 alias nombom='rm -rf node_modules bower_components && npm cache clean && bower cache clean && npm install && bower install'
+alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 
 # Directory jumps
 alias dev='cd ~/Developer'
