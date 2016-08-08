@@ -54,9 +54,12 @@ plugins=(
     colored-man
     ember
     git
+    git-flow
     node
     npm
     sublime
+    thefuck
+    vagrant
     z
     zsh-syntax-highlighting
 )
