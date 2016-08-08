@@ -1,5 +1,5 @@
 [user]
-    name  = Elad Shahar
+    name = Elad Shahar
     email = SaladFork@Gmail.com
 
 [alias]
@@ -44,13 +44,15 @@
 
 [branch]
     autosetuprebase = always
+
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 
 [diff]
     algorithm = patience
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+
