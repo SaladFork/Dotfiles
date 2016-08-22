@@ -100,7 +100,3 @@ source $ZSH/oh-my-zsh.sh
 # Used by agnoster ZSH theme to hide User@System
 DEFAULT_USER="Elad"
 
-# NetScout
-if [ "$USER" = "shahare" ]; then
-    DEFAULT_USER="shahare"
-fi
