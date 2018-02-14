@@ -15,3 +15,7 @@ alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 
 # Directory jumps
 alias dev='cd ~/Developer'
+
+# Used for setting up terminal for the width ember-cli uses
+alias ewidth='echo "----------------------------------------------+---------------------"'
+alias gr='cd $(git rev-parse --show-toplevel) && echo "$_"'

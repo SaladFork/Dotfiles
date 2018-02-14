@@ -55,19 +55,25 @@ plugins=(
     ember
     git
     git-flow
+    mix
     node
     npm
+    rails
+    ruby
+    rvm
     sublime
     thefuck
     vagrant
+    yarn
     z
+    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 # colorize doesn't work?
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Elad/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Elad/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -77,10 +83,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='vim'
+#else
+#  export EDITOR='code --wait'
+#fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -100,3 +106,6 @@ source $ZSH/oh-my-zsh.sh
 # Used by agnoster ZSH theme to hide User@System
 DEFAULT_USER="Elad"
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

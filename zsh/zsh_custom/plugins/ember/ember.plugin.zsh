@@ -15,4 +15,8 @@ _ember () {
   fi
 }
 
+eg() {
+    ember g "$1" "$2" && ember d "${1}-test" "$2"
+}
+
 compdef _ember ember
