@@ -69,9 +69,9 @@
 
 " Formatting {
     set autoindent          " When starting a newline, copy indentation from previous line
-    set tabstop=4           " Number of spaces a tab stands for
-    set softtabstop=4       " How many columns to use when <Tab> is hit in insert mode
-    set shiftwidth=4        " Number of spaces used for each step of (auto) indent
+    set tabstop=2           " Number of spaces a tab stands for
+    set softtabstop=2       " How many columns to use when <Tab> is hit in insert mode
+    set shiftwidth=2        " Number of spaces used for each step of (auto) indent
     set expandtab           " Insert spaces when <Tab> is pressed
     set smarttab            " Be smart about which tabstop/width to use depending on context
     set noerrorbells        " Don't show error bells
