@@ -3,6 +3,9 @@
     email = SaladFork@Gmail.com
 
 [alias]
+    ; Add defaults for existing commands
+    branch = branch --sort=-committerdate
+
     ; Shortcuts
     co = checkout
     ci = commit
@@ -18,6 +21,7 @@
     lga = log --color-words --all --graph --format='%C(bold blue)%h%C(reset) -%C(bold green)%d%C(reset) %C(white)%s%C(reset) %C(dim white)<%an>%C(reset) %C(dim yellow)(%ar)%C(reset)'
 
     ; New git commands (Misc)
+    addcw    = -c interactive.diffFilter=\"git diff --color-words\" add -p
     type     = cat-file -t
     dump     = cat-file -p
     wdiff    = diff --color-words
@@ -29,6 +33,7 @@
     ; New external commands
     live = "!while :; do clear; git --no-pager lga; sleep 2; done"
     new  = "!git init && git commit --allow-empty -m 'Initial commit'"
+    delete-merged-branches = "!git branch --merged master | grep -v -e 'master' -e '\\*' | xargs -n 1 git branch -d && git remote prune origin"
 
 [color]
     ; This automatically expands to include all (color.diff, color.branch, etc.)
@@ -40,7 +45,7 @@
     new    = bold green ; make added text bold
 
 [core]
-    excludesfile = ~/.gitignore_global
+    excludesfile = /Users/Elad/.gitignore_global
 
 [branch]
     autosetuprebase = always
@@ -50,6 +55,7 @@
 
 [diff]
     algorithm = patience
+    indentHeuristic = on
 
 [filter "lfs"]
     clean = git-lfs clean %f
